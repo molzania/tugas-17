@@ -22,8 +22,8 @@ function ListFilm() {
 <>
 {post.results && post.results.map((item, index) => (
     <div className="film" key={index}>
-        <h3>{item.original_title}</h3>
-        <img src={item.poster_path} alt="poster" className="poster"/>
+       <img src={item.poster_path} alt="poster" className="poster"/>
+        <h3>{item.title}</h3>
         <p>Tanggal Rilis: {item.release_date}</p>
 
 

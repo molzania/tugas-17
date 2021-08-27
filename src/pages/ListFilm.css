@@ -8,13 +8,16 @@
 }
 
 .poster{
-    width:100px;
-    height: 100px;
+    width: 50px;
+    height:75px;
 }
 
 .film {
+    background-color: black;
+    color: white;
     padding: 15px;
-    width:30%;
+    width: 200px;
+    height: 300px;
     margin: 10px;
     border: 1px solid black;
 }

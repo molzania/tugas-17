@@ -1,0 +1,34 @@
+.Navbar {
+    padding: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-fluid{
+    float: left;
+    display: inline;
+}
+
+span {
+    font-size: 30px;
+    margin:10px;
+}
+
+.buttons {
+    float:right;
+}
+
+button{
+    padding: 15px;
+    border:1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    margin:5px;
+}
+
+.menu-bar{
+    display:inline;
+    text-align: center;
+}

@@ -1,0 +1,20 @@
+.list-film{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    margin: auto;
+    padding: 10px;
+}
+
+.poster{
+    width:15%;
+    
+}
+
+.film {
+    padding: 15px;
+    width:30%;
+    margin: 10px;
+    border: 1px solid black;
+}

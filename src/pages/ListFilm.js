@@ -1,5 +1,6 @@
 //api key: https://api.themoviedb.org/3/movie/now_playing?api_key=9e0de5499870264659308848dbad6b2a
 import {useState, useEffect} from 'react';
+import './ListFilm.css'
 
 function ListFilm() {
 
@@ -20,9 +21,9 @@ function ListFilm() {
     return (
 <>
 {post.results && post.results.map((item, index) => (
-    <div key={index}>
+    <div className="film" key={index}>
         <h3>{item.original_title}</h3>
-        <img src={item.backdrop_path} alt="poster"/>
+        <img src={item.poster_path} alt="poster" className="poster"/>
         <p>Tanggal Rilis: {item.release_date}</p>
 
 

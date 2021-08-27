@@ -1,0 +1,13 @@
+.list-film{
+    padding-top:30px;
+    overflow: scroll;
+    width:80%;
+    height: 300px;
+    justify-content: center;
+    margin:auto;
+}
+
+.Home{
+    padding-bottom: 30px;
+}
+

@@ -1,31 +1,29 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import './Signup.css';
 
 function SignUp() {
+
+    // const [fields, handleFieldsChange] = useFormFields({Name:"", Username:"", Email:"", Password:""})
+    // const history = useHistory();
+
 
         return (
             <div className="signup-form">
                 <h3>Sign Up Form</h3>
 
                <div className="form-group">
-               <label>Nama Lengkap</label>
+               <label>Name:</label>
                <input type="text" className="form-control" placeholder="Nama" />
            </div>
 
            <div className="form-group">
-               <label>Username</label>
+               <label>Username:</label>
                <input type="text" className="form-control" placeholder="Username" />
            </div>
-          
-           <div class="form-group">
-    <label>Jenis Kelamin</label>
-    <label className="radio-inline"><input type="radio"  name="gender"/>Wanita</label>
-    <label className="radio-inline"><input type="radio" name="gender"/>Pria</label>
-    </div>
 
            <div className="form-group">
-                    <label>Email address</label>
+                    <label>Email:</label>
                     <input type="email" className="form-control" placeholder="Email" />
                 </div>
 

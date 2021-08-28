@@ -5,12 +5,12 @@ import './Login.css';
 export default function Login() {
     const history = useHistory();
 
-    const [User, setUser] = useState({email:"Molzania@gmail.com", password:"AkuSedangPusing"
+    const [User] = useState({email:"Molzania@gmail.com", password:"AkuSedangPusing"
     })
 
     const [dataLogin, setdataLogin] = useState({email:"", password:""})
 
-    const handleChange = (event) => {
+    const handleChangeLogin = (event) => {
         // console.log(event);
         // setdataLogin(event.target.value);
 
@@ -20,7 +20,11 @@ export default function Login() {
         })
     }
 
-    function handleSubmit(event) {
+    function validateFormLogin(){
+        return (dataLogin.password.length > 0 && dataLogin.email.length > 0)
+    }
+
+    function handleSubmitLogin(event) {
         event.preventDefault();
         
         alert('Username: ' + dataLogin.email + ' Password:' + dataLogin.password)
@@ -35,21 +39,21 @@ export default function Login() {
 
         return (
             <div className="login">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmitLogin}>
                 <h1>Login</h1>
                 <div className="form-group">
                     <input type="email" className="form-control" placeholder="Email" 
-                    value={dataLogin.email} onChange={handleChange}
+                    value={dataLogin.email} onChange={handleChangeLogin}
                     name="email"
                      ></input>
                 </div>
                 <div className="form-group">
                     <input type="password" className="form-control" placeholder="Password" 
-                    value={dataLogin.password} name="password" onChange={handleChange}
+                    value={dataLogin.password} name="password" onChange={handleChangeLogin}
                 ></input>
                 </div>
                 <div>
-                    <button type="submit" className="submit">Submit</button>
+                    <button type="submit" className="submit" disabled={!validateFormLogin()}>Submit</button>
                 </div>
                 </form>
             </div>

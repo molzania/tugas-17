@@ -5,10 +5,10 @@ import './Login.css';
 export default function Login() {
     const history = useHistory();
 
-    const [User, setUser] = useState({username:"Molzania", password:"AkuSedangPusing"
+    const [User, setUser] = useState({email:"Molzania@gmail.com", password:"AkuSedangPusing"
     })
 
-    const [dataLogin, setdataLogin] = useState({username:"", password:""})
+    const [dataLogin, setdataLogin] = useState({email:"", password:""})
 
     const handleChange = (event) => {
         // console.log(event);
@@ -23,8 +23,8 @@ export default function Login() {
     function handleSubmit(event) {
         event.preventDefault();
         
-        alert('Username: ' + dataLogin.username + ' Password:' + dataLogin.password)
-        if(dataLogin.username === User.username){
+        alert('Username: ' + dataLogin.email + ' Password:' + dataLogin.password)
+        if(dataLogin.email === User.email){
             if(dataLogin.password === User.password){
                 history.push("/User");
             }
@@ -38,9 +38,9 @@ export default function Login() {
                 <form onSubmit={handleSubmit}>
                 <h1>Login</h1>
                 <div className="form-group">
-                    <input type="username" className="form-control" placeholder="Username" 
-                    value={dataLogin.username} onChange={handleChange}
-                    name="username"
+                    <input type="email" className="form-control" placeholder="Username" 
+                    value={dataLogin.email} onChange={handleChange}
+                    name="email"
                      ></input>
                 </div>
                 <div className="form-group">

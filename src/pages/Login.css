@@ -1,0 +1,15 @@
+.form-control{
+    width: 300px;
+    margin:10px;
+    height: 30px;
+}
+
+.submit {
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.login {
+    padding:30px;
+}

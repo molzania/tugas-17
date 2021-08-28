@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button} from 'react-bootstrap';
 import { Link, NavLink }from 'react-router-dom';
 import './Header.css';
 import logo from './img/logo.png';

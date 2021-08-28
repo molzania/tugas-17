@@ -1,10 +1,12 @@
-import React, { useHistory, useState } from "react";
-import User from './User';
+import React, { useState } from "react";
+import {useHistory} from 'react-router-dom';
 import './Login.css';
 
 export default function Login() {
+    const history = useHistory();
 
-
+    const [User, setUser] = useState({username:"Molzania", password:"AkuSedangPusing"
+    })
 
     const [dataLogin, setdataLogin] = useState({username:"", password:""})
 
@@ -20,16 +22,15 @@ export default function Login() {
 
     function handleSubmit(event) {
         event.preventDefault();
+        
         alert('Username: ' + dataLogin.username + ' Password:' + dataLogin.password)
+        if(dataLogin.username === User.username){
+            if(dataLogin.password === User.password){
+                history.push("/User");
+            }
+        }
         }
       
-
-
-
-
-
-
-
     console.log(dataLogin);
 
         return (

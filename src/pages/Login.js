@@ -38,7 +38,7 @@ export default function Login() {
                 <form onSubmit={handleSubmit}>
                 <h1>Login</h1>
                 <div className="form-group">
-                    <input type="email" className="form-control" placeholder="Username" 
+                    <input type="email" className="form-control" placeholder="Email" 
                     value={dataLogin.email} onChange={handleChange}
                     name="email"
                      ></input>

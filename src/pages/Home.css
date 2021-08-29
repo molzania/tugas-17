@@ -17,3 +17,10 @@
     border-top: 100px solid black;
     border-left: 100vw solid transparent;
  }
+
+
+ .gambar{
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+ }

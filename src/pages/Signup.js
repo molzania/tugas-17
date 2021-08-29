@@ -22,8 +22,8 @@ function SignUp() {
     }
 
     function validateFormSignup(){
-        return (fields.FullName.length > 0 && fields.Username.length > 0
-            && fields.Email.length > 0 && fields.Password.length > 0 )
+        return (fields.fullName.length > 0 && fields.username.length > 0
+            && fields.email.length > 0 && fields.password.length > 0 )
     }
 
 

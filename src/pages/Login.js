@@ -5,7 +5,7 @@ import './Login.css';
 export default function Login() {
     const history = useHistory();
 
-    const [User] = useState({email:"Molzania@gmail.com", password:"AkuSedangPusing"
+    const [User] = useState({email:"Molzania@gmail.com", password:"Bismillah"
     })
 
     const [dataLogin, setdataLogin] = useState({email:"", password:""})
@@ -31,7 +31,7 @@ export default function Login() {
         if(dataLogin.email === User.email){
             if(dataLogin.password === User.password){
                 history.push("/User");
-            }
+            } 
         }
         }
       

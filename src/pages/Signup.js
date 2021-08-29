@@ -4,7 +4,7 @@ import './Signup.css';
 
 function SignUp() {
 
-    const [fields, setFields] = useState({FullName:"", Username:"", Email:"", Password:""})
+    const [fields, setFields] = useState({fullname:"", username:"", email:"", password:""})
     const handleChangeSignup = (event) => {
          
         setFields({
@@ -17,7 +17,7 @@ function SignUp() {
     const handleSubmitSignup = (event) => {
         event.preventDefault();
         console.log(fields);
-        alert(`Your Data is \n Full Name: ${fields.FullName} \n Username: ${fields.Username} \n Email: ${fields.Email}` )
+        alert(`Your Data is \n Full Name: ${fields.fullname} \n Username: ${fields.username} \n Email: ${fields.email}` )
         history.push("/login");
     }
 
@@ -35,23 +35,23 @@ function SignUp() {
 
                <div className="form-register">
                <label>Full Name:</label>
-               <input type="text" className="form-control" placeholder="Full-Name" name="FullName" value={fields.FullName} onChange={handleChangeSignup}/>
+               <input type="text" className="form-control" placeholder="Full-Name" name="fullname" value={fields.fullname} onChange={handleChangeSignup}/>
            </div>
 
 
            <div className="form-register">
                <label>Username:</label>
-               <input type="text" className="form-control" placeholder="Username" name="Username" value={fields.Username} onChange={handleChangeSignup}/>
+               <input type="text" className="form-control" placeholder="Username" name="username" value={fields.username} onChange={handleChangeSignup}/>
            </div>
 
            <div className="form-register">
                     <label>Email:</label>
-                    <input type="email" className="form-control" placeholder="Email" name="Email" value={fields.Email} onChange={handleChangeSignup}/>
+                    <input type="email" className="form-control" placeholder="Email" name="email" value={fields.email} onChange={handleChangeSignup}/>
                 </div>
 
                 <div className="form-register">
                     <label>Password:</label>
-                    <input type="password" className="form-control" placeholder="Enter password" name="Password" value={fields.Password} onChange={handleChangeSignup} />
+                    <input type="password" className="form-control" placeholder="Enter password" name="password" value={fields.password} onChange={handleChangeSignup} />
                 </div>
 
                 <button type="submit" className="sign-up" onClick={handleSubmitSignup} disabled={!validateFormSignup}>Sign Up</button>

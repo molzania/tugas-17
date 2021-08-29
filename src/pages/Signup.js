@@ -4,14 +4,13 @@ import './Signup.css';
 
 function SignUp() {
 
-    const [fields, setFields] = useState({FullName:"", Username:"", Email:"", Gender:"", Password:""})
+    const [fields, setFields] = useState({FullName:"", Username:"", Email:"", Password:""})
     const handleChangeSignup = (event) => {
-         console.log(event);
-         setFields(event.target.value);
+         
         setFields({
             ...fields,
             [event.target.name]: event.target.value,
-            selectedOption: event.target.value
+            BirthDate: event.target.value
         }
         )
     }
@@ -27,12 +26,6 @@ function SignUp() {
                <label>Full Name:</label>
                <input type="text" className="form-control" placeholder="Full-Name" name="FullName" value={fields.FullName} onChange={handleChangeSignup}/>
            </div>
-
-           <div className="form-register">
-               <label>Gender</label>
-        <input type="radio" value="Male" name="gender" value="Male" checked={fields.Gender === 'Male'} onChange={handleChangeSignup}/> Male
-        <input type="radio" value="Female" name="gender" value="Female" checked={fields.Gender === 'Female'} onChange={handleChangeSignup}/> Female
-      </div>
 
            <div className="form-register">
                <label>Username:</label>

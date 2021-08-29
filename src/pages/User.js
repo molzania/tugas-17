@@ -17,6 +17,12 @@ return(
   </div>
 </div>
 </div>
+<div className="user-page">
+<h2>Laman User</h2>
+<h3>Selamat Menikmati Filmnya</h3>
+
+
+</div>
 </>
 
 
